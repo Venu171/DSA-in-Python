@@ -31,3 +31,15 @@ def is_palindrome_number(n):
     return reverse==n
 print(is_palindrome_number(121))#True
 
+=======================# 4. Factorial Of Number===========================================
+
+def factorial_of_number(n):
+    """
+    n!=n*(n-1)*(n-2)*-----*1
+    """
+    factorial_res=1# since 0!=1
+    for i in range(n,1,-1):
+        factorial_res*=i
+    return factorial_res
+print(factorial_of_number(5))
+
