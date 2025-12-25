@@ -43,3 +43,19 @@ def factorial_of_number(n):
     return factorial_res
 print(factorial_of_number(5))
 
+========================# 5. Trailing zeros in a factorial==============================
+
+def trailing_zeros_in_factorial(n):
+    """
+    trailing_zeros_in_factorial=n/5+n/25+n/125+-------
+    """
+    count=0
+    i=5
+    while n//i>=1:
+        count+=n//i
+        i*=5
+    return count
+print(find_trailing_zeros(100))#24
+
+=========================# 6. GCD or HCF of two numbers==================================
+
