@@ -58,4 +58,28 @@ def trailing_zeros_in_factorial(n):
 print(find_trailing_zeros(100))#24
 
 =========================# 6. GCD or HCF of two numbers==================================
+# Optimized Euclidian method
+def gcd(a, b):
+    # Everything divides 0
+    if a == 0:
+        return b
+    if b == 0:
+        return a
 
+    # Base case
+    if a == b:
+        return a
+
+    # a is greater
+    if a > b:
+        if a % b == 0:
+            return b
+        return gcd(a - b, b)
+    if b % a == 0:
+        return a
+    return gcd(a, b - a)
+
+# Driver code
+a = 98
+b = 56
+print(f"GCD of {a} and {b} is {gcd(a, b)}")# 14
