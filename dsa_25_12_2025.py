@@ -83,3 +83,4 @@ def gcd(a, b):
 a = 98
 b = 56
 print(f"GCD of {a} and {b} is {gcd(a, b)}")# 14
+=======
