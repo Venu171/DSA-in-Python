@@ -189,3 +189,17 @@ def rectangle_pattern(n,m):
         res_arr.append("*"*m)
     return res_arr
 print(rectangle_pattern(4,5))#['*****', '*****', '*****', '*****']
+#==============================Right Angled Triangle============================
+"""
+You are given an integer n. 
+Your task is to return a right-angled triangle pattern of '*'
+where each side has n characters, represented as a list of strings. 
+The triangle has '*' characters, starting with 1 star in the first row, 
+2 stars in the second row, and so on until the last row has n stars.
+"""
+def right_angled_triangle(n):
+    res_arr=[]
+    for i in range(1,n+1):
+        res_arr.append("*"*i)
+    return res_arr
+print(right_angled_triangle(5))#['*', '**', '***', '****', '*****']
