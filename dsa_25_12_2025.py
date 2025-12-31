@@ -1,10 +1,10 @@
-=======================# 1. Sum of natural numbers========================================
+#=======================# 1. Sum of natural numbers========================================
 
 def sum_of_natural_numbers(n):
     return (n*(n+1))//2
 print(sum_of_natural_numbers(10))#55
 
-=======================# 2. Count Digits==================================================
+#=======================# 2. Count Digits==================================================
 
 def count_digits(n):
     count=0
@@ -14,7 +14,7 @@ def count_digits(n):
     return count
 count_digits(123)#3
 
-========================# 3. Palindrome Number============================================
+#========================# 3. Palindrome Number============================================
 """
 Approach 1:
 Here, we are usig the below approach to solve the problem
@@ -31,7 +31,7 @@ def is_palindrome_number(n):
     return reverse==n
 print(is_palindrome_number(121))#True
 
-=======================# 4. Factorial Of Number===========================================
+#=======================# 4. Factorial Of Number===========================================
 
 def factorial_of_number(n):
     """
@@ -43,7 +43,7 @@ def factorial_of_number(n):
     return factorial_res
 print(factorial_of_number(5))
 
-========================# 5. Trailing zeros in a factorial==============================
+#========================# 5. Trailing zeros in a factorial==============================
 
 def trailing_zeros_in_factorial(n):
     """
@@ -57,7 +57,7 @@ def trailing_zeros_in_factorial(n):
     return count
 print(find_trailing_zeros(100))#24
 
-=========================# 6. GCD or HCF of two numbers==================================
+#=========================# 6. GCD or HCF of two numbers==================================
 # Optimized Euclidian method
 def gcd(a, b):
     # Everything divides 0
@@ -83,7 +83,7 @@ def gcd(a, b):
 a = 98
 b = 56
 print(f"GCD of {a} and {b} is {gcd(a, b)}")# 14
-======= LCM Of Two Numbers========================================
+#======= LCM Of Two Numbers========================================
 # GCD and HCF of two numbers
 # Efficient
 
@@ -100,7 +100,7 @@ a = 12
 b = 15
 print(lcm(a,b))#60
 
-=============================Check for prime======================
+#=============================Check for prime======================
 # Efficient
 
 def isprime(n) :
@@ -124,7 +124,7 @@ def isprime(n) :
 
 n = 7
 print(isprime(n))
-=====================Prime Factorization======================
+#=====================Prime Factorization======================
 def is_prime(num):
     if num <= 1:
         return False
@@ -140,3 +140,10 @@ def prime_factors(n):
                 print(i, end=' ')
                 n //= i
 prime_factors(100)#2 2 5 5
+#========================Check Whether string Is palindrome Or Not==========================
+def is_palindrome(s):
+    s=s.lower().replace(" ","")
+    return s==s[::-1]
+
+print(is_palindrome("A man a plan a canal Panama"))#True
+print(is_palindrome("Hello"))#False
