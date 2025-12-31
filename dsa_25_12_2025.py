@@ -159,3 +159,20 @@ def square_of_side(n):
         res_arr.append("*"*n)
     return res_arr
 square_of_side(4)#['****', '****', '****', '****']
+#======================Hollow Square of side 'N'========================================
+"""
+You are given an integer n. 
+Your task is to return a hollow square pattern of size n x n made up of the character '*', 
+represented as a list of strings. The hollow square has '*' on the border, and spaces ' ' 
+in the middle (except for side lengths of 1 and 2).
+"""
+def hollow_square_of_side_n(n):
+    res_arr=[]
+    for i in range(1,n+1):
+        if i==1 or i==n:
+            res_arr.append("*"*n)
+        else:
+            string="*"+" "*int(n-2)+"*"
+            res_arr.append(string)
+    return res_arr
+print(hollow_square_of_side_n(3))#['***', '* *', '***']
