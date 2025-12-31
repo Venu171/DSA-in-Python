@@ -147,3 +147,15 @@ def is_palindrome(s):
 
 print(is_palindrome("A man a plan a canal Panama"))#True
 print(is_palindrome("Hello"))#False
+#=============================Square of side 'N'========================================================
+"""
+Problem Description: You are given an integer n. 
+Your task is to return a square pattern of size n x n made up of the character '*', 
+represented as a list of strings.
+""""
+def square_of_side(n):
+    res_arr=[]
+    for i in range(1,n+1):
+        res_arr.append("*"*n)
+    return res_arr
+square_of_side(4)#['****', '****', '****', '****']
