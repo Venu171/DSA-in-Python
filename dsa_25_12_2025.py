@@ -176,3 +176,16 @@ def hollow_square_of_side_n(n):
             res_arr.append(string)
     return res_arr
 print(hollow_square_of_side_n(3))#['***', '* *', '***']
+#======================Rectangle Pattern==================================
+"""
+You are given two integers, n and m. 
+Your task is to return a rectangle pattern of '*', 
+where n represents the number of rows (length) and 
+m represents the number of columns (breadth).
+"""
+def rectangle_pattern(n,m):
+    res_arr=[]
+    for i in range(n):
+        res_arr.append("*"*m)
+    return res_arr
+print(rectangle_pattern(4,5))#['*****', '*****', '*****', '*****']
