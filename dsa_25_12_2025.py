@@ -276,3 +276,17 @@ Floyd's Triangle is a triangular array of natural numbers
 where the first row contains 1, the second row contains 2 and 3, 
 the third row contains 4, 5, and 6, and so on.
 """
+def floyd_triangle(n):
+    res_arr=[]
+    current_num=1
+    for i in range(1,n+1):
+        res_string=""
+        for j in range(current_num,current_num+i):
+            if j==current_num+i-1:
+                res_string+=f"{j}"+''
+                current_num=j+1
+            else:
+                res_string+=f"{j}"+' '
+        res_arr.append(res_string)
+    return res_arr
+print(floyd_triangle(3))#['1', '2 3', '4 5 6']
