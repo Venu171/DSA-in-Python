@@ -217,3 +217,62 @@ def inverted_right_angled_triangle(n):
         res_arr.append("*"*i)
     return res_arr
 print(inverted_right_angled_triangle(5))#['*****', '****', '***', '**', '*']
+#======================================Pyramid Pattern======================
+"""
+Problem Description:
+You are given an integer n. 
+Your task is to return a pyramid pattern of '*' where each side has n rows, 
+represented as a list of strings. The pyramid is centered, with 1 star in the first row, 
+3 stars in the second row, and so on, increasing by 2 stars per row until the base row has 2n - 1 stars.
+"""
+def pyramid_pattern(n):
+    formula=2*n-1
+    res_arr=[]
+    for i in range(1,n+1):
+        res_string="*"*(2*i-1)
+        res_arr.append(res_string.center(formula))
+    return res_arr
+print(pyramid_pattern(5))#['    *    ', '   ***   ', '  *****  ', ' ******* ', '*********']
+#======================================Inverted Pyramid Pattern======================
+"""
+You are given an integer n. 
+Your task is to return an inverted pyramid pattern of '*', 
+where each side has n rows, represented as a list of strings. 
+The first row has 2n - 1 stars, the second row has 2n - 3 stars, and so on, 
+until the last row has 1 star, with each row centered using spaces.
+"""
+def inverted_pyramid_pattern(n):
+    formula=2*n-1
+    res_arr=[]
+    for i in range(n,0,-1):
+        res_string="*"*(2*i-1)
+        res_arr.append(res_string.center(formula))
+    return res_arr
+print(inverted_pyramid_pattern(3))#['*****', ' *** ', '  *  ']
+#===================================Right Angled Triangle with Numbers============================
+"""
+Problem Description:
+You are given an integer n. 
+Your task is to return a right-angled triangle pattern 
+where each row contains repeated digits. 
+The first row contains the number 1 repeated once, 
+the second row contains the number 2 repeated twice, 
+and so on until the nth row contains the number n repeated n times.
+"""
+def right_angled_triangle_numbers(n):
+    res_arr=[]
+    for i in range(1,n+1):
+        res_string=f"{i}"*i
+        res_arr.append(res_string)
+    return res_arr
+print(right_angled_triangle_numbers(5))#['1', '22', '333', '4444', '55555']
+#=====================================Floyds Triangle================================
+"""
+Problem Description:
+You are given an integer n. 
+Your task is to return the first n rows of Floyd’s Triangle, 
+represented as a list of strings. 
+Floyd's Triangle is a triangular array of natural numbers 
+where the first row contains 1, the second row contains 2 and 3, 
+the third row contains 4, 5, and 6, and so on.
+"""
