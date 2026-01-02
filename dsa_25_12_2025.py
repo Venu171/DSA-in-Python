@@ -290,6 +290,19 @@ def floyd_triangle(n):
         res_arr.append(res_string)
     return res_arr
 print(floyd_triangle(3))#['1', '2 3', '4 5 6']
+#==============================All Divisors of a Number===========================
+def printDivisors(n) :
+	i = 1
+	while i <= n :
+		if (n % i==0) :
+			print (i,end=" ")
+		i = i + 1
+		
+# Driver method
+print ("The divisors of 100 are: ")
+printDivisors(100)
+#The divisors of 100 are: 
+#1 2 4 5 10 20 25 50 100
 #================================Diamond Pattern========================================
 """
 Problem Description:
