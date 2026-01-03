@@ -303,6 +303,23 @@ print ("The divisors of 100 are: ")
 printDivisors(100)
 #The divisors of 100 are: 
 #1 2 4 5 10 20 25 50 100
+#================================Sieve of Eratosthenes==================================
+def SieveOfEratosthenes(num):
+	prime = [True for i in range(num+1)]
+	p = 2
+	while (p * p <= num):
+
+		if (prime[p] == True):
+
+			for i in range(p * p, num+1, p):
+				prime[i] = False
+		p += 1
+
+	for p in range(2, num+1):
+		if prime[p]:
+			print(p)
+SieveOfEratosthenes(20)
+# 2 3 5 7 11 13 17 19
 #================================Diamond Pattern========================================
 """
 Problem Description:
