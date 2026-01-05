@@ -341,3 +341,32 @@ with n rows for the upper part (the widest row will have 2n - 1 stars),
 and the lower part is the mirrored version of the upper part. 
 Each row should be centered with appropriate spaces.
 """
+def generate_diamond(n):
+    """
+    Generates a diamond pattern of a given size (n) as a list of strings.
+    The total height of the diamond will be 2*n - 1 lines.
+    """
+    diamond_lines = []
+    # Create the sequence of row indices: 0 to n-1, then n-2 down to 0
+    # For n=3, this sequence is [0, 1, 2, 1, 0]
+    rows_indices = list(range(n)) + list(range(n - 2, -1, -1))
+
+    for i in rows_indices:
+        # Calculate number of spaces: decreases as i increases in the first half
+        spaces = ' ' * (n - i - 1)
+        # Calculate number of stars: increases by 2 in each step
+        stars = '*' * (2 * i + 1)
+        # Combine spaces and stars to form the line
+        line = spaces + stars
+        diamond_lines.append(line)
+
+    return diamond_lines
+
+# Example Usage:
+size = 4
+diamond = generate_diamond(size)
+
+# The function returns the following list for size = 4:
+# ['   *', '  ***', ' *****', '*******', ' *****', '  ***', '   *']
+print("\nList representation:")
+print(diamond)
