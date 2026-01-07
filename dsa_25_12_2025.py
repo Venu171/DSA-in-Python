@@ -387,3 +387,11 @@ def power(x,n) :
 x = 4
 n = 5
 print(power(x,n))#1024###(4**5=10124)
+#=============================Mean Of a List==============================
+def Average(lst):
+	return sum(lst) / len(lst)
+
+lst = [15, 9, 55, 41, 35, 20, 62, 49]
+average = Average(lst)
+
+print("Average of the list =", round(average, 2))#Average of the list = 35.75
