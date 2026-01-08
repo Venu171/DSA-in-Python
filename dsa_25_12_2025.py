@@ -395,3 +395,20 @@ lst = [15, 9, 55, 41, 35, 20, 62, 49]
 average = Average(lst)
 
 print("Average of the list =", round(average, 2))#Average of the list = 35.75
+#========================Separate Even and Odd=============================
+def separateEvenOdd(l):
+    even = []
+    odd = []
+    for x in l:
+        if x%2==0:
+            
+            even.append(x)
+        else:
+            odd.append(x)
+            
+    return even,odd
+
+l = [100,120,111,165]
+even,odd = separateEvenOdd(l)
+print(even)#[100, 120]
+print(odd)#[111,165]
