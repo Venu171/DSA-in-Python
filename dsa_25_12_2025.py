@@ -412,3 +412,14 @@ l = [100,120,111,165]
 even,odd = separateEvenOdd(l)
 print(even)#[100, 120]
 print(odd)#[111,165]
+#==============================Get Smaller Elements==========================
+def getSmaller(l, x):
+    res = []
+    for e in l:
+        if e < x:
+            res.append(e)
+    return res
+
+l = [8, 100, 20, 40, 3, 7]
+x = 10
+print(getSmaller(l, x))#[8,3,7]
