@@ -423,3 +423,15 @@ def getSmaller(l, x):
 l = [8, 100, 20, 40, 3, 7]
 x = 10
 print(getSmaller(l, x))#[8,3,7]
+#==========================Largest Element in a List================================
+def getMax(l):
+    if not l:
+        return None
+    res = l[0]
+    for i in range(1, len(l)):
+        if l[i] > res:
+            res = l[i]
+    return res
+
+l = [1, 2, 3, 4, 5]
+print(getMax(l))  # 5
