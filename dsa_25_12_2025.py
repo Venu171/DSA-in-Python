@@ -464,3 +464,9 @@ def getSecMax(l):
 
 l = [int(x) for x in input().split()]
 print(getSecMax(l))#34
+#==============Write a function to convert temperatures from Fahrenheit to Celsius.=============
+#formula_for_Fahrenheit_to_Celsius=(5/9)*(F-32)
+def Fahrenheit_to_Celsius(F):
+	formula=(5/9)*(F-32)
+	return formula
+print(Fahrenheit_to_Celsius(98.6))#37.0
