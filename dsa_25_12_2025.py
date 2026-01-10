@@ -470,3 +470,22 @@ def Fahrenheit_to_Celsius(F):
 	formula=(5/9)*(F-32)
 	return formula
 print(Fahrenheit_to_Celsius(98.6))#37.0
+#==========Write a basic generator function that produces the numbers from 1 to 10============
+def gen_func():
+    for i in range(1,11):
+        yield i
+for i in gen_func():
+    print(i)
+#=========Create a generator that produces the Fibonacci sequence infinitely=========
+def generate_fibonacci(n):
+    a,b=0,1
+    for i in range(n):
+        yield a
+        a,b=b,b+a
+gen=generate_fibonacci(10)
+for i in gen:
+    print(i)
+#==============Use a generator expression to calculate the sum of squares from 1 to 100===========
+n=10
+generate_sum_of_squares=sum(i**2 for i in range(1,n+1))
+print(generate_sum_of_squares)#385
