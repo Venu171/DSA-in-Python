@@ -488,4 +488,19 @@ for i in gen:
 #==============Use a generator expression to calculate the sum of squares from 1 to 100===========
 n=10
 generate_sum_of_squares=sum(i**2 for i in range(1,n+1))
-print(generate_sum_of_squares)#385
+print(generate_sum_of_squares) #385
+#==========Implement a generator that takes a list and loops over it in reverse order=======
+def reverse_func(lst):
+    for i in range(len(lst)-1,-1,-1):
+        yield lst[i]
+gen=reverse_func([1,2,3,4])
+for i in gen:
+    print(i)
+#===========Build a random number generator using Python's random library and generator pattern==================
+import random
+
+def generate_random_num(n):
+    while True:
+        yield random.randint(1,n)
+gen=generate_random_num(10)
+print(next(gen))#any number between 1,n
