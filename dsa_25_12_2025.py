@@ -504,3 +504,18 @@ def generate_random_num(n):
         yield random.randint(1,n)
 gen=generate_random_num(10)
 print(next(gen))#any number between 1,n
+#============remove duplicates==========================================
+"""
+Given a sorted array, the task is to remove the duplicate elements from the array and return its size of reduced array.
+"""
+def removeDuplicates(arr, n):
+    res=1 
+    for i in range(1, n):
+        if(arr[res-1]!=arr[i]):
+            arr[res]=arr[i]
+            res+=1
+    return res
+    
+n=7
+arr=[10, 20, 20, 30, 30, 30, 30]
+print(removeDuplicates(arr, n))#3
