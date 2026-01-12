@@ -519,3 +519,15 @@ def removeDuplicates(arr, n):
 n=7
 arr=[10, 20, 20, 30, 30, 30, 30]
 print(removeDuplicates(arr, n))#3
+#=====================Left Rotate a list by one==============================
+def rotateByone(l):
+    n = len(l)
+    x = l[0]
+    for i in range(1, n):
+        l[i - 1] = l[i]
+
+    l[n - 1] = x
+
+l = [10, 20, 30, 40]
+rotateByone(l)
+print(l)#[20, 30, 40, 10]
