@@ -531,3 +531,20 @@ def rotateByone(l):
 l = [10, 20, 30, 40]
 rotateByone(l)
 print(l)#[20, 30, 40, 10]
+#====================One Odd Occurring======================================
+"""
+Given an array of positive integers. All numbers occur an even number of times except one number which occurs an odd number of times. Find the number in O(n) time & constant space.
+"""
+def findodd(arr) :
+    
+    for i in arr :
+        count = 0 
+        
+        for j in arr :
+            if i == j :
+                count += 1 
+                
+        if count % 2 != 0 :
+            return i
+arr = [4,3,4,4,4,5,5,3,3]
+print(findodd(arr))#3
