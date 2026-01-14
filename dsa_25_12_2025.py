@@ -548,3 +548,10 @@ def findodd(arr) :
             return i
 arr = [4,3,4,4,4,5,5,3,3]
 print(findodd(arr))#3
+#====================Print 1 to N using Recursion in Python===========================
+def print1toN(n):
+    if n == 0:
+        return
+    print1toN(n - 1)
+    print(n)
+print1toN(3)# 1 2 3
