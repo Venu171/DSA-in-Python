@@ -565,3 +565,12 @@ def printNto1(n):
 
 n = 3
 printNto1(n)#3 2 1
+#=========================Sum of Digits using Recursion================================
+def dSum(n):
+    if n < 10:
+        return n
+    return dSum(n // 10) + n % 10
+
+
+
+print(dSum(253))#10
