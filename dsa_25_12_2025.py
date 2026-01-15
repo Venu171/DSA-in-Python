@@ -591,3 +591,12 @@ if (isPalindrome(st)) :
 	print("Yes")
 else :
 	print("No")
+#==========================Sum of natural numbers using recursion=============================
+def recurSum(n):
+	if n <= 1:
+		return n
+	return n + recurSum(n - 1)
+
+# Driver code
+n = 5
+print(recurSum(n))# 15
