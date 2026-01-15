@@ -555,3 +555,13 @@ def print1toN(n):
     print1toN(n - 1)
     print(n)
 print1toN(3)# 1 2 3
+#====================Print N to 1 using Recursion in Python=============================
+def printNto1(n):
+    if n <= 0:
+        return
+    print(n)
+    printNto1(n - 1)
+
+
+n = 3
+printNto1(n)#3 2 1
