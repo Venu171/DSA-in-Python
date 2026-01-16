@@ -600,3 +600,22 @@ def recurSum(n):
 # Driver code
 n = 5
 print(recurSum(n))# 15
+#=========================Square Root==========================================================
+def floorSqrt(x):
+	if (x == 0 or x == 1):
+		return x
+	start = 1
+	end = x//2
+	while (start <= end):
+		mid = (start + end)
+		if (mid*mid == x):
+			return mid
+		if (mid * mid < x):
+			start = mid + 1
+			ans = mid
+		else:
+			# If mid*mid is greater than x
+			end = mid-1
+	return ans
+x = 11
+print(floorSqrt(x))#3
