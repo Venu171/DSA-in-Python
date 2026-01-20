@@ -678,3 +678,34 @@ def minDiff(arr,m) :
     
 arr = [7,3,1,8,9,12,56]
 minDiff(arr,3)#2
+#========================Cycle Sort==============================================
+def cyclesortdist(arr) :
+    w = 0
+    for cs in range(len(arr) - 1) :
+        item = arr[cs]
+        pos = cs
+        for i in range(cs+1, len(arr)) :
+            if arr[i] < item :
+                pos = pos + 1 
+        if pos == cs :
+            continue
+        
+        while item == arr[pos]:
+            pos += 1
+        arr[pos], item = item, arr[pos]
+        w += 1
+        
+        while pos != cs :
+            pos = cs 
+            for i in range(cs+1, len(arr)) :
+                if arr[i] < item :
+                    pos += 1
+            while item == arr[pos]:
+                pos += 1
+            arr[pos], item = item, arr[pos]
+            w += 1
+    return arr
+
+arr = [20,40,30,10,50]
+n = len(arr)
+print(cyclesortdist(arr))#[10,20,30,40,50]
