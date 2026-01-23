@@ -775,3 +775,25 @@ x = [0.897, 0.565, 0.656,
 	0.1234, 0.665, 0.3434]
 print("Sorted Array is")
 print(bucketSort(x))#[0.1234, 0.3434, 0.565, 0.656, 0.665, 0.897]
+#==================Print matrix in snake pattern===========================
+M = 4
+N = 4
+def printf(mat):
+	global M, N
+	# Traverse through all rows
+	for i in range(M):
+		if i % 2 == 0:
+			for j in range(N):
+				print(str(mat[i][j]),
+					end=" ")
+
+		else:
+			for j in range(N - 1, -1, -1):
+				print(str(mat[i][j]),
+					end=" ")
+
+mat = [[10, 20, 30, 40],
+	[15, 25, 35, 45],
+	[27, 29, 37, 48],
+	[32, 33, 39, 50]]
+printf(mat)
