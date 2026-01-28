@@ -868,3 +868,26 @@ def issubseq(s1,s2) :
 s1 = "ABCDEF"
 s2 = "ADE"
 print(issubseq(s1,s2))#True
+#=====================Check for Anagram in Python======================
+s1= input("Enter a String:\n")
+s2= input("Enter a String:\n")
+
+def areAnagram(s1,s2):
+    if len(s1) != len(s2):
+        return False
+    count=[0]*256
+    for i in range(len(s1)):
+        count[ord(s1[i])]+=1
+        count[ord(s2[i])]-=1
+    for x in count:
+        if x!=0:
+            return False
+    return True
+print(areAnagram(s1,s2))
+"""
+Enter a String:
+venu
+Enter a String:
+uenv
+True
+"""
