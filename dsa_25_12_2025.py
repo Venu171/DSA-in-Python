@@ -12,7 +12,7 @@ def count_digits(n):
         n//=10
         count+=1
     return count
-count_digits(123)#3
+count_digits(1234)#4
 
 #========================# 3. Palindrome Number============================================
 """
