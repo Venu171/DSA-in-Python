@@ -996,3 +996,17 @@ def getInvCount(arr, n):
 arr = [1, 20, 6, 4, 5]
 n = len(arr)
 print("Number of inversions are",getInvCount(arr, n))# Number of inversions are 5
+#===================Display the Longest Name=======================================
+def find_longest_names(arr):
+    sorted_arr = sorted(arr, key=lambda x: len(x), reverse=True)
+    max_length = len(sorted_arr[0])
+    longest_names = []
+    for name in sorted_arr:
+        if len(name) == max_length:
+            longest_names.append(name)
+        else:
+            break
+
+    return longest_names
+arr=["toggle","Stackoverflow","Origin","Alternatively"]
+print(find_longest_names(arr))#['Stackoverflow', 'Alternatively']
