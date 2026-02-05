@@ -1010,3 +1010,24 @@ def find_longest_names(arr):
     return longest_names
 arr=["toggle","Stackoverflow","Origin","Alternatively"]
 print(find_longest_names(arr))#['Stackoverflow', 'Alternatively']
+#===========================Indexes of Subarray Sum======================================
+def subarraySum(arr, target):
+    start = 0
+    current_sum = 0
+    n = len(arr)
+    
+    for end in range(n):
+        current_sum += arr[end]
+        
+        while current_sum > target and start < end:
+            current_sum -= arr[start]
+            start += 1
+            
+        if current_sum == target:
+            return [start + 1, end + 1]
+            
+    return [-1]
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+target = 15
+print(subarraySum(arr, target)) # Output: [1, 5]
