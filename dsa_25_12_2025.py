@@ -1031,3 +1031,21 @@ def subarraySum(arr, target):
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 target = 15
 print(subarraySum(arr, target)) # Output: [1, 5]
+#=============Kandane's Algorithm=======================================================
+"""
+You are given an integer array arr[]. You need to find the maximum sum of a subarray (containing at least one element) in the array arr[].
+"""
+def maxSubarraySum(arr):
+    res = arr[0]
+    
+    maxEnding = arr[0]
+
+    for i in range(1, len(arr)):
+        maxEnding = max(maxEnding + arr[i], arr[i])
+        
+        res = max(res, maxEnding)
+    
+    return res
+
+arr = [2, 3, -8, 7, -1, 2, 3]
+print(maxSubarraySum(arr))#11
