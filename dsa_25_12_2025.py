@@ -1049,3 +1049,16 @@ def maxSubarraySum(arr):
 
 arr = [2, 3, -8, 7, -1, 2, 3]
 print(maxSubarraySum(arr))#11
+#=======================Equilibrium Point=====================================================
+def equilibrium_point(arr):
+    total_sum = sum(arr)
+    left_sum = 0
+
+    for i in range(len(arr)):
+        if left_sum == total_sum - left_sum - arr[i]:
+            return i
+        left_sum += arr[i]
+
+    return -1
+
+print(equilibrium_point([-7, 1, 5, 2, -4, 3, 0]))#3
