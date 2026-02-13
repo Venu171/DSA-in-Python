@@ -1091,3 +1091,32 @@ def minJumps(arr):
 
 arr = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
 print(minJumps(arr))#3
+#===============================Transpose the matrix=================================
+N = 4
+
+def transpose(A, B):
+
+	for i in range(N):
+		for j in range(N):
+			B[i][j] = A[j][i]
+
+
+A = [[1, 1, 1, 1],
+	[2, 2, 2, 2],
+	[3, 3, 3, 3],
+	[4, 4, 4, 4]]
+
+B = [[0 for x in range(N)] for y in range(N)]
+
+transpose(A, B)
+
+print("Result matrix is")
+for i in range(N):
+	for j in range(N):
+		print(B[i][j], " ", end='')
+	print()
+#Result matrix is
+#1  2  3  4  
+#1  2  3  4  
+#1  2  3  4  
+#1  2  3  4  
