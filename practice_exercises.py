@@ -124,5 +124,6 @@ def filter_long_words(word_list):
     return larger_strings
 
 
-print(filter_long_words(["apple", "banana", "cherry", "dragonfruit", "elderberry"]))
-#['banana', 'cherry', 'dragonfruit', 'elderberry']
+print(filter_long_words(["apple", "banana", "berry", "dragonfruit", "elderberry"]))
+
+#['banana', 'dragonfruit', 'elderberry']
