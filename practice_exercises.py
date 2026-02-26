@@ -127,3 +127,37 @@ def filter_long_words(word_list):
 print(filter_long_words(["apple", "banana", "berry", "dragonfruit", "elderberry"]))
 
 #['banana', 'dragonfruit', 'elderberry']
+
+===========Guessing Game=========================
+"""
+- Write a function (guessing_game) that takes no arguments.
+- When run, the function chooses a random integer between 0 and 100 (inclusive).
+- Each time the user enters a guess, the program indicates one of the following: 
+   – Too high 
+   – Too low 
+   – Just right
+- If the user guesses correctly, the program exits. Otherwise, the user is asked to try again.
+- The program only exits after the user guesses correctly.
+"""
+import random
+
+def guessing_game():
+    random_num=random.randint(0,100)
+    guess=0
+    while True:
+        try:
+            user_guess=int(input("Enter the number b/w 0 to 100: "))
+            guess+=1
+            status=""
+            if user_guess==random_num:
+                print("Just right🦀!")
+                break
+            elif user_guess>random_num:
+                print(f"No.of Guesses: {guess}.\nToo High!\nSorry your guess =={user_guess}== is incorrect.Please try your luck again!🙌")
+                continue
+            elif user_guess<random_num:
+                print(f"No.of Guesses: {guess}.\nToo Low!\nSorry your guess =={user_guess}== is incorrect.Please try your luck again!🙌")
+                continue
+        except Exception as e:
+            print(f"Error Occured⚠️! {str(e)}.\n Enter your guess again!")
+guessing_game()
