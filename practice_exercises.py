@@ -161,3 +161,19 @@ def guessing_game():
         except Exception as e:
             print(f"Error Occured⚠️! {str(e)}.\n Enter your guess again!")
 guessing_game()
+#=============================Pig_Latin_sentence=================================
+def pig_latin(inp):
+    vowel_lst=['a','e','i','o','u']
+    if inp[0] in vowel_lst:
+        return inp+"way"
+    else:
+        return inp[1:]+inp[0]+'ay'
+
+def pl_sentence(sentence):
+    lst=sentence.split(" ")
+    res=[]
+    for i in lst:
+        stc=pig_latin(i)
+        res.append(stc)
+    return " ".join(res)
+print(pl_sentence("this is a test translation"))#histay isway away esttay ranslationtay
