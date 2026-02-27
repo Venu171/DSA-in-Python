@@ -177,3 +177,17 @@ def pl_sentence(sentence):
         res.append(stc)
     return " ".join(res)
 print(pl_sentence("this is a test translation"))#histay isway away esttay ranslationtay
+#========Ubbi-Dubbi====================================================================
+def ubbi_dubbi(string):
+    res_str=list(string)
+    vowelcount=0
+    for i,j in enumerate(string):
+        if j in ['a','e','i','o','u']:
+            if vowelcount:
+                res_str.insert(i+vowelcount,'ub')
+            else:
+                res_str.insert(i,'ub')
+            vowelcount+=1
+    print(res_str)
+    return ''.join(res_str)
+print(ubbi_dubbi("translation"))#trubanslubatubiubon
