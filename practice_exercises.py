@@ -191,3 +191,9 @@ def ubbi_dubbi(string):
     print(res_str)
     return ''.join(res_str)
 print(ubbi_dubbi("translation"))#trubanslubatubiubon
+#===============================String Sorting===========================================
+def strsort(string):
+    res_str=list(string)
+    res=sorted(res_str)
+    return ''.join(res)
+print(strsort("translation"))#aailnnorstt
