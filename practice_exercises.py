@@ -197,7 +197,9 @@ def strsort(string):
     res=sorted(res_str)
     return ''.join(res)
 print(strsort("translation"))#aailnnorstt
-#===========================Python Regular Expressions=================================================
+#=================Reverse Arrays≠====≠=============
+arr=[1,2,3,4,5]
+print(arr[::-1])#[5,4,3,2,1]
 
 
 
